@@ -65,11 +65,7 @@ function handleClick(event) {
     // Create form values object
     var formValues = {};
     if (inputDate) {
-        console.log(`Input date is : ${inputDate}`);
-        var d = new Date(inputDate);
-        var convertedDate = (d.getMonth() + 1) + "/" + (d.getDate() + 1) + "/" + d.getFullYear();
-        console.log(`Converted date is ${convertedDate}`);
-        formValues["datetime"] = convertedDate;
+        formValues["datetime"] = inputDate;
     }
     if (inputCity !== " ") {
         formValues["city"] = inputCity;
